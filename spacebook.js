@@ -40,11 +40,9 @@ var passwordEntered = function()
         if(lib.arrayBufferToHex(input) != "d188f7fe1ef021a4a9fde3862624fcc86ed39b0eb4a0490102f6756ceaa70ba9")
         {
             alert("Not valid password");
-
         }
         else
         {
-
             var hashData;
             var firstCompute;
             var secondCompute;
@@ -69,7 +67,6 @@ var passwordEntered = function()
                             var thirdSha = thirdString + merkle_tree[2];
                             var finalArray = lib.hexToArrayBuffer(thirdSha);
                             lib.sha256Hash(finalArray).then(function(ans4){
-
                                 var finalString = lib.arrayBufferToHex(ans4);
                                 if(finalString == merkle_root)
                                 {
